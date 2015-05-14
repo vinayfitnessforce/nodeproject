@@ -1,23 +1,29 @@
 {
-  "name": "nodeproject",
+  "name": "demoLoopback",
   "version": "1.0.0",
-  "description": "billing benchmarks",
-  "main": "app.js",
+  "main": "server/server.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha -R mocha-bamboo-reporter"
+    "pretest": "jshint ."
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:/vnysingh/nodeproject.git"
-  },
-  "author": "Vinay Singh",
-  "license": "ISC",
   "dependencies": {
-    "mysql": "^2.6.2"
+    "compression": "^1.0.3",
+    "cors": "^2.5.2",
+    "errorhandler": "^1.1.1",
+    "loopback": "^2.14.0",
+    "loopback-boot": "^2.6.5",
+    "loopback-connector-mysql": "^1.7.0",
+    "loopback-datasource-juggler": "^2.19.0",
+    "serve-favicon": "^2.0.1"
+  },
+  "optionalDependencies": {
+    "loopback-explorer": "^1.1.0"
   },
   "devDependencies": {
-    "jasmine": "^2.3.1",
-    "mocha":"^2.2.4",
-    "mocha-bamboo-reporter": "*"
-  }
+    "jshint": "^2.5.6"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "description": "demoLoopback"
 }
