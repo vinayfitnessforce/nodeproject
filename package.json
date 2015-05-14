@@ -1,0 +1,22 @@
+{
+  "name": "nodeproject",
+  "version": "1.0.0",
+  "description": "billing benchmarks",
+  "main": "app.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:/vnysingh/nodeproject.git"
+  },
+  "author": "Vinay Singh",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.6.2"
+  },
+  "devDependencies": {
+    "jasmine": "^2.3.1",
+    "mocha":"^2.2.4"
+  }
+}
