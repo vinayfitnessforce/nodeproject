@@ -4,7 +4,7 @@
   "description": "billing benchmarks",
   "main": "app.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha"
+    "test": "./node_modules/.bin/mocha -R mocha-bamboo-reporter"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "jasmine": "^2.3.1",
-    "mocha":"^2.2.4"
+    "mocha":"^2.2.4",
+    "mocha-bamboo-reporter": "*"
   }
 }
