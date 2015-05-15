@@ -1,4 +1,4 @@
-module.exports = function mountLoopBackExplorer(server) {
+ module.exports = function mountLoopBackExplorer(server) {
   var explorer;
   try {
     explorer = require('loopback-explorer');
