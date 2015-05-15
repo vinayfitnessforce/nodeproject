@@ -1,8 +1,9 @@
 {
-  "name": "demoLoopback",
+  "name": "nodeproject",
   "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {
+    "start" : "node server/server.js",
     "test": "./node_modules/.bin/mocha"
   },
   "dependencies": {
@@ -25,5 +26,5 @@
     "type": "",
     "url": ""
   },
-  "description": "demoLoopback"
+  "description": "nodeproject"
 }
