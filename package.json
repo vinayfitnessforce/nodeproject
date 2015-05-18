@@ -3,17 +3,21 @@
   "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {
-    "start" : "node server/server.js",
-    "test": "./node_modules/.bin/mocha"
+    "start": "node server/server.js",
+    "test": "./node_modules/.bin/mocha",
+    "coverage": "`npm bin`/istanbul cover ./node_modules/.bin/_mocha",
+    "coveralls": "npm run-script coverage && ./node_modules/.bin/coveralls < coverage/lcov.info"
   },
   "dependencies": {
     "compression": "^1.0.3",
     "cors": "^2.5.2",
+    "coveralls": "^2.11.2",
     "errorhandler": "^1.1.1",
     "loopback": "^2.14.0",
     "loopback-boot": "^2.6.5",
     "loopback-connector-mysql": "^1.7.0",
     "loopback-datasource-juggler": "^2.19.0",
+    "mocha-lcov-reporter": "0.0.2",
     "serve-favicon": "^2.0.1"
   },
   "optionalDependencies": {
@@ -23,8 +27,8 @@
     "jshint": "^2.5.6"
   },
   "repository": {
-    "type": "",
-    "url": ""
+    "type": "git",
+    "url": "git://github.com/vnysingh/nodeproject.git"
   },
   "description": "nodeproject"
 }
