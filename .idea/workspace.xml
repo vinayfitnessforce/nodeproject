@@ -31,21 +31,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getConfiguration.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="getConfiguration.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/node_modules/codecov.io/lib/getConfiguration.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.2043222">
+              <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="codeship.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="getConfiguration.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/codecov.io/test/getConfiguration.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="36" column="29" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="codeship.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/node_modules/codecov.io/lib/services/codeship.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44204322">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="3" column="31" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -82,11 +92,11 @@
         <option value="$PROJECT_DIR$/coverage/lcov-report/prettify.js" />
         <option value="$PROJECT_DIR$/node_modules/codecov.io/lib/sendToCodeCov.io.js" />
         <option value="$PROJECT_DIR$/node_modules/codecov.io/package.json" />
-        <option value="$PROJECT_DIR$/node_modules/codecov.io/lib/getConfiguration.js" />
         <option value="$PROJECT_DIR$/node_modules/codecov.io/test/getConfiguration.js" />
         <option value="$PROJECT_DIR$/coverage/lcov.info" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/node_modules/codecov.io/lib/services/codeship.js" />
+        <option value="$PROJECT_DIR$/node_modules/codecov.io/lib/getConfiguration.js" />
       </list>
     </option>
   </component>
@@ -643,18 +653,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/codecov.io/lib/getConfiguration.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/codecov.io/lib/services/codeship.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="3" column="31" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/codecov.io/lib/services/codeship.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/codecov.io/test/getConfiguration.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44204322">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="29" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/codecov.io/lib/getConfiguration.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2043222">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
           <folding />
         </state>
       </provider>
