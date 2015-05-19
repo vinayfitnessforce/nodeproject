@@ -5,10 +5,10 @@
   "scripts": {
     "start": "node server/server.js",
     "test": "./node_modules/.bin/mocha",
-    "coverage": "`npm bin`/istanbul cover ./node_modules/.bin/_mocha",
-    "coveralls": "npm run-script coverage && ./node_modules/.bin/coveralls < coverage/lcov.info"
+    "coverage":"istanbul cover ./node_modules/.bin/_mocha -- -R spec && cat ./coverage/lcov.info | ./node_modules/.bin/codecov"
   },
   "dependencies": {
+    "codecov.io": "^0.1.2",
     "compression": "^1.0.3",
     "cors": "^2.5.2",
     "coveralls": "^2.11.2",
