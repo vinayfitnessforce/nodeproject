@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cc76b10d-a35b-47fc-be8e-d71efc1560a7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.coveralls.yml" afterPath="$PROJECT_DIR$/.coveralls.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="nodeproject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/node_modules/coveralls/bin/coveralls.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+              <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -67,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/node_modules/coveralls/lib/getOptions.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="50" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
+              <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -76,8 +77,8 @@
       <file leaf-file-name=".coveralls.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.coveralls.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="55" selection-start-line="0" selection-start-column="55" selection-end-line="0" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.019404916">
+              <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -647,7 +648,7 @@
     <entry file="file://$PROJECT_DIR$/node_modules/coveralls/bin/coveralls.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -663,15 +664,15 @@
     <entry file="file://$PROJECT_DIR$/node_modules/coveralls/lib/getOptions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="50" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
+          <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.coveralls.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="55" selection-start-line="0" selection-start-column="55" selection-end-line="0" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.019404916">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
           <folding />
         </state>
       </provider>
