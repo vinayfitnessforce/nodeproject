@@ -10,9 +10,8 @@
     "start": "node server/server.js",
     "test": "./node_modules/.bin/mocha",
     "coverage": "istanbul cover ./node_modules/.bin/_mocha -- -R spec && cat ./coverage/lcov.info | ./node_modules/.bin/codecov",
-    "_coverage": "istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
-    "codeclimate": "CODECLIMATE_REPO_TOKEN=448f0a49888bf510d14843c1b9760e2591417b17d6d2ffea5ed09604bb9fea0a codeclimate < ./coverage/lcov.info",
-    "coveralls": "CODECLIMATE_REPO_TOKEN=448f0a49888bf510d14843c1b9760e2591417b17d6d2ffea5ed09604bb9fea0a codeclimate < ./coverage/lcov.info"
+    "test-coveralls": "istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "codeclimate": "CODECLIMATE_REPO_TOKEN=448f0a49888bf510d14843c1b9760e2591417b17d6d2ffea5ed09604bb9fea0a codeclimate < ./coverage/lcov.info"
   },
   "dependencies": {
     "codecov.io": "^0.1.2",
