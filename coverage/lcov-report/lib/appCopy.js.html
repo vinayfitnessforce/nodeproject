@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for lib/appCopy.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../prettify.css">
+    <link rel="stylesheet" href="../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">lib/appCopy.js</span></h1>
+    <h2>
+        Statements: <span class="metric">89.41% <small>(76 / 85)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">54% <small>(27 / 50)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">41.67% <small>(5 / 12)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">89.41% <small>(76 / 85)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">lib/</a> &#187; appCopy.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span></td><td class="text"><pre class="prettyprint lang-js">var mysql = require("mysql");
+&nbsp;
+var	months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+&nbsp;
+var	connectionSettings = {
+	host : "192.168.1.2",
+	user : "root",
+	password : "grip@123",
+	database : "nodetest"
+};
+&nbsp;
+var	connection = <span class="fstat-no" title="function not covered" >function(){</span>
+<span class="cstat-no" title="statement not covered" >	return mysql.createConnection(connectionSettings);</span>
+}
+&nbsp;
+var	initApp = <span class="fstat-no" title="function not covered" >function(cb) {</span>
+<span class="cstat-no" title="statement not covered" >	connection().connect(<span class="fstat-no" title="function not covered" >function(err){</span></span>
+<span class="cstat-no" title="statement not covered" >		connectionOnConnect(err,<span class="fstat-no" title="function not covered" >function(data){</span></span>
+<span class="cstat-no" title="statement not covered" >			cb &amp;&amp; cb(data);</span>
+		});
+	});
+}
+&nbsp;
+var	connectionOnConnect = <span class="fstat-no" title="function not covered" >function(err,cb){</span>
+<span class="cstat-no" title="statement not covered" >	if(err){</span>
+<span class="cstat-no" title="statement not covered" >		throw new Error(err);</span>
+	}else{
+&nbsp;
+<span class="cstat-no" title="statement not covered" >		connection().query("SELECT CAST(bill_createddate as DATE) AS bill_createddate,bill_totalpayment FROM nodetest.testbilling ORDER BY bill_createddate ASC LIMIT 200000;"</span>
+			,<span class="fstat-no" title="function not covered" >function(error,results,fields){</span>
+<span class="cstat-no" title="statement not covered" >				connectionOnQuery(error,results,fields,<span class="fstat-no" title="function not covered" >function(data){</span></span>
+<span class="cstat-no" title="statement not covered" >					cb &amp;&amp; cb(data);</span>
+				});
+			});
+	}
+}
+&nbsp;
+var	connectionOnQuery = function(error,results,fields,cb){
+	var billDimensions = calculateBillDimensions(results);
+	var _res = {
+		error : error,
+		results : results,
+		fields : fields,
+		billDimensions : billDimensions
+	};
+	cb &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >cb(_res);</span>
+	return _res;
+}
+&nbsp;
+var	calculateBillDimensions = function(results){
+	var totalBills = 0,totalAmount = 0,currMonth = 0,prevMonth = 0, retResArr = [], retResProp = {};
+	for (var i = 0; i &lt; results.length; i++) {
+		currMonth = results[i].bill_createddate.getMonth();
+		if(prevMonth === currMonth){
+			totalAmount = totalAmount + (results[i].bill_totalpayment || <span class="branch-1 cbranch-no" title="branch not covered" >0)</span>;
+			totalBills = totalBills + 1;
+		}else{
+			retResProp["month"] = months[prevMonth];
+			retResProp["totalBills"] = totalBills;
+			retResProp["totalAmount"] = totalAmount;
+			retResProp["average"] = totalAmount / totalBills;
+&nbsp;
+			retResArr.push(retResProp);
+&nbsp;
+			retResProp = {};
+&nbsp;
+			prevMonth = currMonth;
+			totalAmount = 0;
+			totalBills= 0;
+&nbsp;
+			totalAmount = totalAmount + (results[i].bill_totalpayment || <span class="branch-1 cbranch-no" title="branch not covered" >0)</span>;
+			totalBills = totalBills + 1;
+		}
+	};
+	retResProp["month"] = months[currMonth];
+	retResProp["totalBills"] = totalBills;
+	retResProp["totalAmount"] = totalAmount;
+	retResProp["average"] = totalAmount / totalBills;
+&nbsp;
+	retResArr.push(retResProp);
+	retResProp = {};
+&nbsp;
+	return retResArr;
+}
+&nbsp;
+var	getHighestMonthOfYear = function (results,cb){
+	var highestMonthOfYear = 0,highestMonthOfYearValue = 0;
+	var totalAmount = 0, currMonth = 0, prevMonth = 0;
+	
+	prevMonth = results.length &gt; 0 &amp;&amp; results[0].bill_createddate.getMonth();
+	
+	for (var i = 0; i &lt; results.length; i++) {
+		
+		currMonth = results[i].bill_createddate.getMonth();
+&nbsp;
+		if(prevMonth === currMonth){
+			totalAmount = totalAmount + (results[i].bill_totalpayment || <span class="branch-1 cbranch-no" title="branch not covered" >0)</span>;
+		}else{
+			highestMonthOfYear = totalAmount &gt; highestMonthOfYearValue ? prevMonth : <span class="branch-1 cbranch-no" title="branch not covered" >highestMonthOfYear;</span>
+			highestMonthOfYearValue = totalAmount &gt; highestMonthOfYearValue ? totalAmount : <span class="branch-1 cbranch-no" title="branch not covered" >highestMonthOfYearValue;</span>
+&nbsp;
+			prevMonth = currMonth;
+			totalAmount = (results[i].bill_totalpayment || <span class="branch-1 cbranch-no" title="branch not covered" >0)</span>;
+		}
+	}
+&nbsp;
+	//to display last month of december
+	highestMonthOfYear = totalAmount &gt; highestMonthOfYearValue ? <span class="branch-0 cbranch-no" title="branch not covered" >currMonth </span>: highestMonthOfYear;
+	highestMonthOfYearValue = totalAmount &gt; highestMonthOfYearValue ? <span class="branch-0 cbranch-no" title="branch not covered" >totalAmount </span>: highestMonthOfYearValue;
+	
+	cb &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >cb(highestMonthOfYear, highestMonthOfYearValue);</span>
+&nbsp;
+	return {
+		highestMonthOfYear : highestMonthOfYear,
+		highestMonthOfYearValue : highestMonthOfYearValue
+	};
+}
+&nbsp;
+var	getLowestMonthOfYear = function (results,cb){
+	var lowestMonthOfYear = 99999999999999999,lowestMonthOfYearValue = 99999999999999999;
+	var totalAmount = 0,currMonth = 0,prevMonth = 0;
+	
+	prevMonth = results.length &gt; 0 &amp;&amp; results[0].bill_createddate.getMonth();
+	
+	for (var i = 0; i &lt; results.length; i++) {
+		currMonth = results[i].bill_createddate.getMonth();
+		if(prevMonth === currMonth){
+			totalAmount = totalAmount + (results[i].bill_totalpayment || <span class="branch-1 cbranch-no" title="branch not covered" >0)</span>;
+		}else{
+			lowestMonthOfYear = totalAmount &lt; lowestMonthOfYearValue ? prevMonth : <span class="branch-1 cbranch-no" title="branch not covered" >lowestMonthOfYear;</span>
+			lowestMonthOfYearValue = totalAmount &lt; lowestMonthOfYearValue ? totalAmount : <span class="branch-1 cbranch-no" title="branch not covered" >lowestMonthOfYearValue;</span>
+			
+			prevMonth = currMonth;
+			totalAmount = (results[i].bill_totalpayment || <span class="branch-1 cbranch-no" title="branch not covered" >0)</span>;
+		}
+	};
+	//to display last month of december
+	lowestMonthOfYear = totalAmount &lt; lowestMonthOfYearValue ? <span class="branch-0 cbranch-no" title="branch not covered" >currMonth </span>: lowestMonthOfYear;
+	lowestMonthOfYearValue = totalAmount &lt; lowestMonthOfYearValue ? <span class="branch-0 cbranch-no" title="branch not covered" >totalAmount </span>: lowestMonthOfYearValue;
+	
+	cb &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >cb(lowestMonthOfYear, lowestMonthOfYearValue);</span>
+&nbsp;
+	return {
+		lowestMonthOfYear : lowestMonthOfYear,
+		lowestMonthOfYearValue : lowestMonthOfYearValue
+	};
+}
+&nbsp;
+exports.multiply = function(num1,num2){
+	return num1 * num2;
+}
+&nbsp;
+exports.months = months;
+exports.initApp = initApp;
+exports.connectionOnQuery = connectionOnQuery;
+exports.calculateBillDimensions = calculateBillDimensions;
+exports.getHighestMonthOfYear = getHighestMonthOfYear;
+exports.getLowestMonthOfYear = getLowestMonthOfYear;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu May 21 2015 13:52:38 GMT+0530 (IST)</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
