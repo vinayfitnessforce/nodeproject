@@ -14,10 +14,8 @@
     "check-coverage": "node node_modules/istanbul/lib/cli.js check-coverage --statement 88 --branch 54 --function 40 --line 80"
   },
   "dependencies": {
-    "codecov.io": "^0.1.2",
     "compression": "^1.0.3",
     "cors": "^2.5.2",
-    "coveralls": "^2.11.2",
     "errorhandler": "^1.1.1",
     "loopback": "^2.14.0",
     "loopback-boot": "^2.6.5",

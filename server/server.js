@@ -21,9 +21,7 @@ boot(app, __dirname, function (err) {
   });
 
   app.use('/unittestreport', function (req, res, next) {
-    console.log(req);
-    console.log(res);
-    console.log(next);
+    res.sendFile('index.html', { root: path.join(__dirname, '../coverage/lcov-report') });
   });
 
   // start the server if `$ node server.js`
