@@ -1,6 +1,6 @@
 var mysql = require("loopback-datasource-juggler").DataSource;
 
-// console.log(mysql);
+console.log(mysql); //added by vinay
 
 var	months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
