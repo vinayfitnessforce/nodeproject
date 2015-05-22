@@ -2,10 +2,6 @@
   "name": "nodeproject",
   "version": "1.0.0",
   "main": "server/server.js",
-  "bin": {
-    "codeclimate": "./bin/codeclimate.js",
-    "coveralls": "./bin/coveralls.js"
-  },
   "scripts": {
     "start": "node server/server.js",
     "test": "./node_modules/.bin/mocha",
@@ -13,6 +9,8 @@
     "codeclimate": "CODECLIMATE_REPO_TOKEN=448f0a49888bf510d14843c1b9760e2591417b17d6d2ffea5ed09604bb9fea0a codeclimate < ./coverage/lcov.info",
     "check-coverage": "node node_modules/istanbul/lib/cli.js check-coverage --statement 88 --branch 54 --function 40 --line 80"
   },
+
+
   "dependencies": {
     "compression": "^1.0.3",
     "cors": "^2.5.2",

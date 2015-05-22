@@ -25,6 +25,8 @@ var	initApp = function(cb) {
 	});
 }
 
+//changes for branching - abc
+
 var	connectionOnConnect = function(err,cb){
 	if(err){
 		throw new Error(err);
@@ -96,13 +98,13 @@ var	calculateBillDimensions = function(results,cb){
 var	getHighestMonthOfYear = function (results,cb){
 	var highestMonthOfYear = 0,highestMonthOfYearValue = 0;
 	var totalAmount = 0, currMonth = 0, prevMonth = 0;
-	
+
 	//handle dates passed from api, which get stringified
 	if(typeof results[0].bill_createddate === "string"){
 		results[0].bill_createddate = new Date(Date.parse(results[0].bill_createddate));
 	}
 	prevMonth = results.length > 0 && results[0].bill_createddate.getMonth();
-	
+
 	for (var i = 0; i < results.length; i++) {
 		//handle dates passed from api, which get stringified
 		if(typeof results[i].bill_createddate === "string"){
@@ -124,7 +126,7 @@ var	getHighestMonthOfYear = function (results,cb){
 	//to display last month of december
 	highestMonthOfYear = totalAmount > highestMonthOfYearValue ? currMonth : highestMonthOfYear;
 	highestMonthOfYearValue = totalAmount > highestMonthOfYearValue ? totalAmount : highestMonthOfYearValue;
-	
+
 	cb && cb(highestMonthOfYear, highestMonthOfYearValue);
 
 	return {
@@ -136,13 +138,13 @@ var	getHighestMonthOfYear = function (results,cb){
 var	getLowestMonthOfYear = function (results,cb){
 	var lowestMonthOfYear = 99999999999999999,lowestMonthOfYearValue = 99999999999999999;
 	var totalAmount = 0,currMonth = 0,prevMonth = 0;
-	
+
 	//handle dates passed from api, which get stringified
 	if(typeof results[0].bill_createddate === "string"){
 		results[0].bill_createddate = new Date(Date.parse(results[0].bill_createddate));
 	}
 	prevMonth = results.length > 0 && results[0].bill_createddate.getMonth();
-	
+
 	for (var i = 0; i < results.length; i++) {
 		//handle dates passed from api, which get stringified
 		if(typeof results[i].bill_createddate === "string"){
@@ -155,7 +157,7 @@ var	getLowestMonthOfYear = function (results,cb){
 		}else{
 			lowestMonthOfYear = totalAmount < lowestMonthOfYearValue ? prevMonth : lowestMonthOfYear;
 			lowestMonthOfYearValue = totalAmount < lowestMonthOfYearValue ? totalAmount : lowestMonthOfYearValue;
-			
+
 			prevMonth = currMonth;
 			totalAmount = (results[i].bill_totalpayment || 0);
 		}
@@ -163,7 +165,7 @@ var	getLowestMonthOfYear = function (results,cb){
 	//to display last month of december
 	lowestMonthOfYear = totalAmount < lowestMonthOfYearValue ? currMonth : lowestMonthOfYear;
 	lowestMonthOfYearValue = totalAmount < lowestMonthOfYearValue ? totalAmount : lowestMonthOfYearValue;
-	
+
 	cb && cb(lowestMonthOfYear, lowestMonthOfYearValue);
 
 	return {
