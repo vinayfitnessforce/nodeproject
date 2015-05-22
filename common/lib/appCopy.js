@@ -1,6 +1,6 @@
 var mysql = require("loopback-datasource-juggler").DataSource;
 
-// console.log(mysql);
+console.log(mysql); //added by vinay
 
 var	months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
@@ -24,8 +24,6 @@ var	initApp = function(cb) {
 		});
 	});
 }
-
-//changes for branching - abc
 
 var	connectionOnConnect = function(err,cb){
 	if(err){
