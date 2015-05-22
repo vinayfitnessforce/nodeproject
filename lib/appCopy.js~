@@ -1,9 +1,5 @@
-var mysql = require("loopback-datasource-juggler").DataSource;
-
-console.log(mysql); //added by vinay
-console.log(mysql); //added by ramesh
-
-
+var mysql = require("mysql");
+//ramesh
 var	months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
 var	connectionSettings = {
@@ -14,9 +10,7 @@ var	connectionSettings = {
 };
 
 var	connection = function(){
-	var dataSource = new mysql("mysql",connectionSettings);
-	// console.log(dataSource);
-	return dataSource;
+	return mysql.createConnection(connectionSettings);
 }
 
 var	initApp = function(cb) {
@@ -32,7 +26,7 @@ var	connectionOnConnect = function(err,cb){
 		throw new Error(err);
 	}else{
 
-		connection().connector.query("SELECT CAST(bill_createddate as DATE) AS bill_createddate,bill_totalpayment FROM nodetest.testbilling ORDER BY bill_createddate ASC LIMIT 50;"
+		connection().query("SELECT CAST(bill_createddate as DATE) AS bill_createddate,bill_totalpayment FROM nodetest.testbilling ORDER BY bill_createddate ASC LIMIT 200000;"
 			,function(error,results,fields){
 				connectionOnQuery(error,results,fields,function(data){
 					cb && cb(data);
@@ -53,14 +47,9 @@ var	connectionOnQuery = function(error,results,fields,cb){
 	return _res;
 }
 
-var	calculateBillDimensions = function(results,cb){
+var	calculateBillDimensions = function(results){
 	var totalBills = 0,totalAmount = 0,currMonth = 0,prevMonth = 0, retResArr = [], retResProp = {};
 	for (var i = 0; i < results.length; i++) {
-
-		//handle dates passed from api, which get stringified
-		if(typeof results[i].bill_createddate === "string"){
-			results[i].bill_createddate = new Date(Date.parse(results[i].bill_createddate));
-		}
 		currMonth = results[i].bill_createddate.getMonth();
 		if(prevMonth === currMonth){
 			totalAmount = totalAmount + (results[i].bill_totalpayment || 0);
@@ -91,25 +80,17 @@ var	calculateBillDimensions = function(results,cb){
 	retResArr.push(retResProp);
 	retResProp = {};
 
-	cb && cb(retResArr);
 	return retResArr;
 }
 
 var	getHighestMonthOfYear = function (results,cb){
 	var highestMonthOfYear = 0,highestMonthOfYearValue = 0;
 	var totalAmount = 0, currMonth = 0, prevMonth = 0;
-
-	//handle dates passed from api, which get stringified
-	if(typeof results[0].bill_createddate === "string"){
-		results[0].bill_createddate = new Date(Date.parse(results[0].bill_createddate));
-	}
+	
 	prevMonth = results.length > 0 && results[0].bill_createddate.getMonth();
-
+	
 	for (var i = 0; i < results.length; i++) {
-		//handle dates passed from api, which get stringified
-		if(typeof results[i].bill_createddate === "string"){
-			results[i].bill_createddate = new Date(Date.parse(results[i].bill_createddate));
-		}
+		
 		currMonth = results[i].bill_createddate.getMonth();
 
 		if(prevMonth === currMonth){
@@ -126,7 +107,7 @@ var	getHighestMonthOfYear = function (results,cb){
 	//to display last month of december
 	highestMonthOfYear = totalAmount > highestMonthOfYearValue ? currMonth : highestMonthOfYear;
 	highestMonthOfYearValue = totalAmount > highestMonthOfYearValue ? totalAmount : highestMonthOfYearValue;
-
+	
 	cb && cb(highestMonthOfYear, highestMonthOfYearValue);
 
 	return {
@@ -138,26 +119,17 @@ var	getHighestMonthOfYear = function (results,cb){
 var	getLowestMonthOfYear = function (results,cb){
 	var lowestMonthOfYear = 99999999999999999,lowestMonthOfYearValue = 99999999999999999;
 	var totalAmount = 0,currMonth = 0,prevMonth = 0;
-
-	//handle dates passed from api, which get stringified
-	if(typeof results[0].bill_createddate === "string"){
-		results[0].bill_createddate = new Date(Date.parse(results[0].bill_createddate));
-	}
+	
 	prevMonth = results.length > 0 && results[0].bill_createddate.getMonth();
-
+	
 	for (var i = 0; i < results.length; i++) {
-		//handle dates passed from api, which get stringified
-		if(typeof results[i].bill_createddate === "string"){
-			results[i].bill_createddate = new Date(Date.parse(results[i].bill_createddate));
-		}
-
 		currMonth = results[i].bill_createddate.getMonth();
 		if(prevMonth === currMonth){
 			totalAmount = totalAmount + (results[i].bill_totalpayment || 0);
 		}else{
 			lowestMonthOfYear = totalAmount < lowestMonthOfYearValue ? prevMonth : lowestMonthOfYear;
 			lowestMonthOfYearValue = totalAmount < lowestMonthOfYearValue ? totalAmount : lowestMonthOfYearValue;
-
+			
 			prevMonth = currMonth;
 			totalAmount = (results[i].bill_totalpayment || 0);
 		}
@@ -165,7 +137,7 @@ var	getLowestMonthOfYear = function (results,cb){
 	//to display last month of december
 	lowestMonthOfYear = totalAmount < lowestMonthOfYearValue ? currMonth : lowestMonthOfYear;
 	lowestMonthOfYearValue = totalAmount < lowestMonthOfYearValue ? totalAmount : lowestMonthOfYearValue;
-
+	
 	cb && cb(lowestMonthOfYear, lowestMonthOfYearValue);
 
 	return {
