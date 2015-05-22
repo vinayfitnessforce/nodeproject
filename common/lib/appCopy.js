@@ -25,8 +25,6 @@ var	initApp = function(cb) {
 	});
 }
 
-//changes for branching - abc
-
 var	connectionOnConnect = function(err,cb){
 	if(err){
 		throw new Error(err);
